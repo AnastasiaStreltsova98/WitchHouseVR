@@ -6,6 +6,7 @@ public class changeFluidColor : MonoBehaviour
 {
     public GameObject Fluid;
     public GameObject[] Bubbles;
+    public ParticleSystem explosion;
     //public Color redcolor;
     
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class changeFluidColor : MonoBehaviour
                 bubble.GetComponent<Renderer>().materials[0].color = gColor;
                 bubble.GetComponent<Renderer>().materials[0].SetColor("_EmissionColor", gColor);
             }
+            explosion.Play();
         }
     }
 
